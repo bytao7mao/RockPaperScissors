@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:context="com.example.mariu.rps.MainActivity"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/theUserName"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="USER"
+                android:gravity="center_horizontal"
+                android:textSize="14sp"
+                android:textColor="#616161"
+                android:fontFamily="sans-serif-medium"
+                android:padding="16dp"/>
+
+
+
+<!--setting name for user-->
+
+
+
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:padding="0dp"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="56sp" />
+            <Button
+                android:id="@+id/rockBtn"
+                android:onClick="addRock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ROCK"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"/>
+            <Button
+                android:id="@+id/paperBtn"
+                android:onClick="addPaper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PAPER"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"/>
+            <Button
+                android:id="@+id/scissorsBtn"
+                android:onClick="addScissors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SCISSORS"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="350dp"
+            android:background="@android:color/darker_gray"/>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:context="com.example.mariu.courtcounter.MainActivity"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="BOT"
+                android:gravity="center_horizontal"
+                android:textSize="14sp"
+                android:textColor="#616161"
+                android:fontFamily="sans-serif-medium"
+                android:padding="16dp"/>
+            <TextView
+                android:id="@+id/team_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="56sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-light"
+                android:text="0"
+                android:padding="0dp"/>
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ROCK"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"/>
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PAPER"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"/>
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SCISSORS"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        tools:context="com.example.mariu.courtcounter.MainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/userChoice"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="330dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/cpuChoice"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="330dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reset"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="reset"
+        android:layout_margin="32dp" />
+
+    <Button
+        android:id="@+id/options"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/reset"
+        android:layout_toEndOf="@+id/reset"
+        android:layout_toRightOf="@+id/reset"
+        android:text="Options"
+        android:textSize="6sp"
+        android:textStyle="normal" />
+
+
+
+</RelativeLayout>
