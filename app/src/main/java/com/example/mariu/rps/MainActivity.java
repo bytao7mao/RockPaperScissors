@@ -39,11 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         TextView txtV = findViewById(R.id.theUserName);
-        txtV.setText(name);
+
         Bundle lastIntent = getIntent().getExtras();
         if(lastIntent != null){
             name = lastIntent.getString(NAME);
         }
+        txtV.setText(name);
         configureBackButton();
 
 
