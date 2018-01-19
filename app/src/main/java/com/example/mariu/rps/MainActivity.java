@@ -27,31 +27,24 @@ public class MainActivity extends AppCompatActivity {
     Random r;
     int scoreUser = 0;
     int scoreCpu = 0;
-
-
     Button btnBOT,btn2,btn3;
-    EditText thx;
-    ListView show;
-
-    public static final String TOTAL_SO_FAR = "total";
-    public int total = 0;
+    String name;
+    Button backButton;
+    private static final String NAME = "name";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        configureBackButton();
 
-
-
+        TextView txtV = findViewById(R.id.theUserName);
+        txtV.setText(name);
         Bundle lastIntent = getIntent().getExtras();
         if(lastIntent != null){
-            total = lastIntent.getInt(TOTAL_SO_FAR);
+            name = lastIntent.getString(NAME);
         }
-
-
-
+        configureBackButton();
 
 
 
@@ -65,12 +58,12 @@ public class MainActivity extends AppCompatActivity {
         displayForUser(scoreUser);
         displayForCpu(scoreCpu);
 
-        iv_cpu = (ImageView) findViewById(R.id.cpuChoice);
-        iv_user = (ImageView) findViewById(R.id.userChoice);
+        iv_cpu = findViewById(R.id.cpuChoice);
+        iv_user = findViewById(R.id.userChoice);
 
-        rock = (Button) findViewById(R.id.rockBtn);
-        paper = (Button) findViewById(R.id.paperBtn);
-        scissors = (Button) findViewById(R.id.scissorsBtn);
+        rock = findViewById(R.id.rockBtn);
+        paper = findViewById(R.id.paperBtn);
+        scissors = findViewById(R.id.scissorsBtn);
         r = new Random();
 
         rock.setOnClickListener(new View.OnClickListener() {
@@ -116,11 +109,11 @@ public class MainActivity extends AppCompatActivity {
         displayForUser(scoreUser = 0);
     }
     public void displayForUser(int score){
-        TextView scoreViewA = (TextView) findViewById(R.id.team_a_score);
+        TextView scoreViewA = findViewById(R.id.team_a_score);
         scoreViewA.setText(String.valueOf(score));
     }
     public void displayForCpu(int score){
-        TextView scoreViewB = (TextView) findViewById(R.id.team_b_score);
+        TextView scoreViewB = findViewById(R.id.team_b_score);
         scoreViewB.setText(String.valueOf(score));
     }
 
@@ -201,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void configureBackButton(){
-        Button backButton = findViewById(R.id.options);
+        backButton = findViewById(R.id.options);
         backButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
