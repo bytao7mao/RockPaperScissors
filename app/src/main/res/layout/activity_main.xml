@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +12,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
 
 
         <LinearLayout
@@ -48,17 +54,15 @@
                 android:textSize="56sp" />
             <Button
                 android:id="@+id/rockBtn"
-                android:onClick="addRock"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ROCK"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"/>
             <Button
                 android:id="@+id/paperBtn"
-                android:onClick="addPaper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="PAPER"
@@ -68,7 +72,6 @@
                 android:layout_marginRight="24dp"/>
             <Button
                 android:id="@+id/scissorsBtn"
-                android:onClick="addScissors"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="SCISSORS"
@@ -116,7 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ROCK"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"/>
@@ -146,48 +149,49 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="2"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout2">
 
 
         <ImageView
             android:id="@+id/userChoice"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginTop="330dp"
+            android:layout_marginTop="350dp"
             android:layout_weight="1" />
 
         <ImageView
             android:id="@+id/cpuChoice"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginTop="330dp"
+            android:layout_marginTop="350dp"
             android:layout_weight="1" />
+
+
     </LinearLayout>
-
-
-
 
     <Button
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="reset"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/linearLayout2"
         android:layout_centerHorizontal="true"
         android:onClick="reset"
-        android:layout_margin="32dp" />
+        android:text="reset" />
 
     <Button
         android:id="@+id/options"
         android:layout_width="60dp"
         android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/reset"
         android:layout_alignBottom="@+id/reset"
-        android:layout_toEndOf="@+id/reset"
-        android:layout_toRightOf="@+id/reset"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
         android:text="Options"
         android:textSize="6sp"
         android:textStyle="normal" />
 
-
-
 </RelativeLayout>
+
+</ScrollView>

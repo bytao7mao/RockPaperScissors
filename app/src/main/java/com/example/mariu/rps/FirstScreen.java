@@ -33,6 +33,7 @@ public class FirstScreen extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout);
+
         editTxt = findViewById(R.id.TheeditText);
         txtV = findViewById(R.id.theUserName);
         nextButton = findViewById(R.id.nameBtn);

@@ -9,7 +9,8 @@
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="145dp" />
+        android:layout_marginTop="145dp"
+        android:inputType="textCapWords"/>
 
     <Button
         android:id="@+id/nameBtn"
@@ -22,11 +23,7 @@
         android:layout_marginEnd="57dp"
         android:layout_marginRight="57dp"
         android:gravity="center" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="abra"
-        android:id="@+id/abra"/>
+
 
 
 </RelativeLayout>
