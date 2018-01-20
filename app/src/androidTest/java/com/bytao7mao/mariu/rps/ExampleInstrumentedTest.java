@@ -1,4 +1,4 @@
-package com.example.mariu.rps;
+package com.bytao7mao.mariu.rps;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

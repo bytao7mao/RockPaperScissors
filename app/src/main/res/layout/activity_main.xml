@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
@@ -7,33 +9,33 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:fontFamily="casual"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:id="@+id/linearLayout">
+        android:orientation="horizontal">
 
 
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            tools:context="com.example.mariu.rps.MainActivity"
+            tools:context="com.bytao7mao.mariu.rps.MainActivity"
             android:orientation="vertical">
 
 
             <TextView
                 android:id="@+id/theUserName"
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text="USER"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
                 android:gravity="center_horizontal"
-                android:textSize="14sp"
+                android:padding="16dp"
+                android:text="USER"
                 android:textColor="#616161"
-                android:fontFamily="sans-serif-medium"
-                android:padding="16dp"/>
+                android:textSize="14sp" />
 
 
 
@@ -57,6 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ROCK"
+                android:fontFamily="casual"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
@@ -66,6 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="PAPER"
+                android:fontFamily="casual"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
@@ -75,6 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="SCISSORS"
+                android:fontFamily="casual"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
@@ -91,7 +96,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            tools:context="com.example.mariu.courtcounter.MainActivity"
+            tools:context="com.bytao7mao.mariu.courtcounter.MainActivity"
             android:orientation="vertical">
 
 
@@ -99,10 +104,11 @@
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:text="BOT"
+                android:fontFamily="casual"
                 android:gravity="center_horizontal"
                 android:textSize="14sp"
+
                 android:textColor="#616161"
-                android:fontFamily="sans-serif-medium"
                 android:padding="16dp"/>
             <TextView
                 android:id="@+id/team_b_score"
@@ -119,6 +125,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ROCK"
+                android:fontFamily="casual"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
@@ -128,6 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="PAPER"
+                android:fontFamily="casual"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
@@ -137,6 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="SCISSORS"
+                android:fontFamily="casual"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
@@ -145,7 +154,7 @@
 
     </LinearLayout>
     <LinearLayout
-        tools:context="com.example.mariu.courtcounter.MainActivity"
+        tools:context="com.bytao7mao.mariu.courtcounter.MainActivity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="2"

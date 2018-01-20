@@ -1,4 +1,4 @@
-package com.example.mariu.rps;
+package com.bytao7mao.mariu.rps;
 
 import org.junit.Test;
 

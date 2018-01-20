@@ -1,6 +1,3 @@
 <resources>
     <string name="app_name">RPS</string>
-    <string name="enter_name">Enter your name:</string>
-    <string name="calling_activ">Calling activity message</string>
-    <string name="get_the_name">Go get the name</string>
 </resources>
