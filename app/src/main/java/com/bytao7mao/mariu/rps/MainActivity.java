@@ -1,5 +1,6 @@
 package com.bytao7mao.mariu.rps;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,11 +26,14 @@ public class MainActivity extends AppCompatActivity {
     //setting custom fonts
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final MediaPlayer rockSound = MediaPlayer.create(this, R.raw.st);
+        final MediaPlayer paperSound = MediaPlayer.create(this, R.raw.papier);
+        final MediaPlayer scissorsSound = MediaPlayer.create(this, R.raw.scis);
 
         TextView txtV = findViewById(R.id.theUserName);
 
@@ -39,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         }
         txtV.setText(name);
         configureBackButton();
+
 
 
 
@@ -64,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 myChoice = "rock";
+                rockSound.start();
                 iv_user.setImageResource(R.drawable.rock);
                 try {
                     calculate();
@@ -76,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 myChoice = "paper";
+                paperSound.start();
                 iv_user.setImageResource(R.drawable.paper);
                 try {
                     calculate();
@@ -88,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 myChoice = "scissors";
+                scissorsSound.start();
                 iv_user.setImageResource(R.drawable.scissors);
                 try {
                     calculate();

@@ -3,14 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/giff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#424242"
+        android:src="@raw/giphy" />
+
     <EditText
         android:id="@+id/TheeditText"
+        style="@style/Widget.AppCompat.EditText"
         android:layout_width="200dp"
         android:layout_height="50dp"
+        android:gravity="center"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="145dp"
-        android:inputType="textCapWords"/>
+        android:layout_marginTop="44dp"
+        android:background="@android:color/white"
+        android:hint="Your Name Here"
+        android:inputType="textCapWords" />
 
     <Button
         android:id="@+id/nameBtn"
@@ -22,8 +36,39 @@
         android:layout_below="@+id/TheeditText"
         android:layout_marginEnd="57dp"
         android:layout_marginRight="57dp"
+        android:layout_marginBottom="60dp"
         android:gravity="center" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#f5f5f5"
+        android:layout_marginBottom="130dp"
+        android:text="@string/thanks_for_downloading_this_app" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:textColor="#f5f5f5"
+        android:layout_marginTop="18dp"
+        android:text="@string/enjoy" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:textStyle="italic"
+        android:textSize="12sp"
+        android:text="@string/all_rights_reserved_to_bytao7mao" />
 
 
 </RelativeLayout>

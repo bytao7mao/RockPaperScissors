@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">RPS</string>
+    <string name="all_rights_reserved_to_bytao7mao"><![CDATA[All rights reserved to @bytao7mao]]> </string>
+    <string name="enjoy">Enjoy !</string>
+    <string name="thanks_for_downloading_this_app">Thanks for downloading this app !</string>
+
 </resources>
