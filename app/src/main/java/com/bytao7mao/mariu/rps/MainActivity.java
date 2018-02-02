@@ -12,7 +12,10 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-
+    public static final String MY_RESULT = "myResult";
+    public static final String CPU_RESULT = "cpuResult";
+    TextView scoreViewA;
+    TextView scoreViewB;
     Button rock, paper, scissors;
     ImageView iv_cpu, iv_user;
     String myChoice, cpuChoice, result;
@@ -37,15 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
         TextView txtV = findViewById(R.id.theUserName);
 
+        scoreViewA = findViewById(R.id.team_a_score);
+        scoreViewB = findViewById(R.id.team_b_score);
         Bundle lastIntent = getIntent().getExtras();
         if(lastIntent != null){
             name = lastIntent.getString(NAME);
         }
         txtV.setText(name);
         configureBackButton();
-
-
-
 
         btnBOT = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
@@ -106,7 +108,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(MY_RESULT, scoreViewA.getText().toString());
+        outState.putString(CPU_RESULT, scoreViewB.getText().toString());
+    }
 
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        CharSequence ok = savedInstanceState.getCharSequence(MY_RESULT);
+        CharSequence ok2 = savedInstanceState.getCharSequence(CPU_RESULT);
+        scoreViewA.setText(ok);
+        scoreViewB.setText(ok2);
+    }
 
 
     public void reset(View v){
@@ -114,11 +130,9 @@ public class MainActivity extends AppCompatActivity {
         displayForUser(scoreUser = 0);
     }
     public void displayForUser(int score){
-        TextView scoreViewA = findViewById(R.id.team_a_score);
         scoreViewA.setText(String.valueOf(score));
     }
     public void displayForCpu(int score){
-        TextView scoreViewB = findViewById(R.id.team_b_score);
         scoreViewB.setText(String.valueOf(score));
     }
 
@@ -127,7 +141,6 @@ public class MainActivity extends AppCompatActivity {
         int cpu = r.nextInt(3);
         if (cpu == 0) {
            // Toast.makeText(MainActivity.this, "The bot is unsure about his move ... but he choose ROCK", Toast.LENGTH_LONG).show();
-
             cpuChoice = "rock";
             iv_cpu.setImageResource(R.drawable.rock);
         } else if (cpu == 1) {
