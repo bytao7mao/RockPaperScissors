@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         final MediaPlayer rockSound = MediaPlayer.create(this, R.raw.st);
         final MediaPlayer paperSound = MediaPlayer.create(this, R.raw.papier);
         final MediaPlayer scissorsSound = MediaPlayer.create(this, R.raw.scis);
+//        final MediaPlayer bgMusic = MediaPlayer.create(this,R.raw.asian);
 
         TextView txtV = findViewById(R.id.theUserName);
 

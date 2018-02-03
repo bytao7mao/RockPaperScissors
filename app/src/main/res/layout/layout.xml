@@ -70,5 +70,14 @@
         android:textSize="12sp"
         android:text="@string/all_rights_reserved_to_bytao7mao" />
 
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_toLeftOf="@+id/TheeditText"
+        android:layout_toStartOf="@+id/TheeditText"
+        android:text="ToggleButton" />
+
 
 </RelativeLayout>
