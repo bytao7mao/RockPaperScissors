@@ -3,5 +3,15 @@
     <string name="all_rights_reserved_to_bytao7mao"><![CDATA[All rights reserved to @bytao7mao]]> </string>
     <string name="enjoy">Enjoy !</string>
     <string name="thanks_for_downloading_this_app">Thanks for downloading this app !</string>
+    <string name="_0">0</string>
+    <string name="rock">ROCK</string>
+    <string name="paper">PAPER</string>
+    <string name="scissors">SCISSORS</string>
+    <string name="bot">BOT</string>
+    <string name="reset">reset</string>
+    <string name="options">Options</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="set_name">SET NAME</string>
+    <string name="your_name_here">Your Name Here</string>
 
 </resources>

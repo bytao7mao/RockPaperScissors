@@ -46,11 +46,6 @@ public class FirstScreen extends Activity {
         });
 
 
-
-
-
-
-
         editTxt = findViewById(R.id.TheeditText);
         txtV = findViewById(R.id.theUserName);
         nextButton = findViewById(R.id.nameBtn);

@@ -16,18 +16,23 @@ public class MainActivity extends AppCompatActivity {
     public static final String CPU_RESULT = "cpuResult";
     TextView scoreViewA;
     TextView scoreViewB;
-    Button rock, paper, scissors;
+    Button rock;
+    Button paper;
+    Button scissors;
     ImageView iv_cpu, iv_user;
-    String myChoice, cpuChoice, result;
+    private String myChoice;
+    private String cpuChoice;
+    private String result;
     Random r;
-    int scoreUser = 0;
-    int scoreCpu = 0;
-    Button btnBOT,btn2,btn3;
+    private int scoreUser = 0;
+    private int scoreCpu = 0;
+    Button btnBOT;
+    Button btn2;
+    Button btn3;
     String name;
-    Button backButton;
+    private Button backButton;
     private static final String NAME = "name";
     //setting custom fonts
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +43,7 @@ public class MainActivity extends AppCompatActivity {
         final MediaPlayer paperSound = MediaPlayer.create(this, R.raw.papier);
         final MediaPlayer scissorsSound = MediaPlayer.create(this, R.raw.scis);
 //        final MediaPlayer bgMusic = MediaPlayer.create(this,R.raw.asian);
-
         TextView txtV = findViewById(R.id.theUserName);
-
         scoreViewA = findViewById(R.id.team_a_score);
         scoreViewB = findViewById(R.id.team_b_score);
         Bundle lastIntent = getIntent().getExtras();
@@ -125,7 +128,6 @@ public class MainActivity extends AppCompatActivity {
         scoreViewB.setText(ok2);
     }
 
-
     public void reset(View v){
         displayForCpu(scoreCpu = 0);
         displayForUser(scoreUser = 0);
@@ -136,7 +138,6 @@ public class MainActivity extends AppCompatActivity {
     public void displayForCpu(int score){
         scoreViewB.setText(String.valueOf(score));
     }
-
 
     public void calculate() throws InterruptedException {
         int cpu = r.nextInt(3);
@@ -153,7 +154,6 @@ public class MainActivity extends AppCompatActivity {
             cpuChoice = "scissors";
             iv_cpu.setImageResource(R.drawable.scissors);
         }
-
         if(myChoice.equals("rock") && cpuChoice.equals("paper")){
           //  Thread.sleep(2000);
             result = "You Lose";
@@ -205,12 +205,8 @@ public class MainActivity extends AppCompatActivity {
             displayForCpu(scoreCpu);
         }
 
-
         Toast.makeText(MainActivity.this, result, Toast.LENGTH_SHORT).show();
     }
-
-
-
 
     private void configureBackButton(){
         backButton = findViewById(R.id.options);

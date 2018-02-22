@@ -23,12 +23,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp"
         android:background="@android:color/white"
-        android:hint="Your Name Here"
+        android:hint="@string/your_name_here"
         android:inputType="textCapWords" />
 
     <Button
         android:id="@+id/nameBtn"
-        android:text="SET NAME"
+        android:text="@string/set_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/TheeditText"
@@ -77,7 +77,7 @@
         android:layout_below="@+id/textView2"
         android:layout_toLeftOf="@+id/TheeditText"
         android:layout_toStartOf="@+id/TheeditText"
-        android:text="ToggleButton" />
+        android:text="@string/togglebutton" />
 
 
 </RelativeLayout>
