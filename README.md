@@ -4,8 +4,8 @@
 
 
 
-<br><img align="top" width="500" src="assets/ssNew1.png" alt="http://goodtoknow.media.ipcdigital.co.uk" />
-<br><img align="top" width="500" src="assets/ssNew.png" alt="http://goodtoknow.media.ipcdigital.co.uk" />
+<br><img align="top" width="500" src="assets/ssNew1.png" alt="dd" />
+<br><img align="top" width="500" src="assets/ssNew.png" alt="ff" />
 
 
 
