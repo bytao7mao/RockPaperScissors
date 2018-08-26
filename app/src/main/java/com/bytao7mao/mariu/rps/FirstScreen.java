@@ -14,23 +14,21 @@ import android.widget.ToggleButton;
 
 
 /**
- * Created by Mariu on 1/18/2018.
+ * Created by Marius on 1/18/2018.
  */
 
 public class FirstScreen extends Activity {
     private EditText editTxt;
-    private TextView txtV;
     String name;
-    Button nextButton,playButton;
+    Button nextButton;
     private static final String NAME = "name";
-
-
+    MediaPlayer bgMusic = new MediaPlayer();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout);
 
-        final MediaPlayer bgMusic = MediaPlayer.create(this,R.raw.asian);
+        bgMusic = MediaPlayer.create(this,R.raw.asian);
 
        ToggleButton toggle = (ToggleButton) findViewById(R.id.toggleButton);
        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -47,7 +45,6 @@ public class FirstScreen extends Activity {
 
 
         editTxt = findViewById(R.id.TheeditText);
-        txtV = findViewById(R.id.theUserName);
         nextButton = findViewById(R.id.nameBtn);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +59,7 @@ public class FirstScreen extends Activity {
                 }
                 Intent i = new Intent(FirstScreen.this, MainActivity.class);
                 i.putExtra(NAME, name);
+                bgMusic.pause();
                 startActivity(i);
             }
         });

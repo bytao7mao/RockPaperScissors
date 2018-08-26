@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.shashank.sony.fancytoastlib.FancyToast;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         final MediaPlayer rockSound = MediaPlayer.create(this, R.raw.st);
         final MediaPlayer paperSound = MediaPlayer.create(this, R.raw.papier);
         final MediaPlayer scissorsSound = MediaPlayer.create(this, R.raw.scis);
-//        final MediaPlayer bgMusic = MediaPlayer.create(this,R.raw.asian);
+
         TextView txtV = findViewById(R.id.theUserName);
         scoreViewA = findViewById(R.id.team_a_score);
         scoreViewB = findViewById(R.id.team_b_score);
@@ -75,8 +75,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 myChoice = "rock";
+                rockSound.seekTo(1500);
                 rockSound.start();
                 iv_user.setImageResource(R.drawable.rock);
+                iv_user.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        iv_user.setVisibility(View.INVISIBLE);
+                    }
+                },2000);
                 try {
                     calculate();
                 } catch (InterruptedException e) {
@@ -88,8 +95,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 myChoice = "paper";
+                paperSound.seekTo(1500);
                 paperSound.start();
                 iv_user.setImageResource(R.drawable.paper);
+                iv_user.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        iv_user.setVisibility(View.INVISIBLE);
+                    }
+                },2000);
                 try {
                     calculate();
                 } catch (InterruptedException e) {
@@ -101,8 +115,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 myChoice = "scissors";
+                scissorsSound.seekTo(1500);
                 scissorsSound.start();
                 iv_user.setImageResource(R.drawable.scissors);
+                iv_user.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        iv_user.setVisibility(View.INVISIBLE);
+                    }
+                },2000);
                 try {
                     calculate();
                 } catch (InterruptedException e) {
@@ -145,14 +166,32 @@ public class MainActivity extends AppCompatActivity {
            // Toast.makeText(MainActivity.this, "The bot is unsure about his move ... but he choose ROCK", Toast.LENGTH_LONG).show();
             cpuChoice = "rock";
             iv_cpu.setImageResource(R.drawable.rock);
+            iv_cpu.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    iv_cpu.setVisibility(View.INVISIBLE);
+                }
+            },2000);
         } else if (cpu == 1) {
            // Toast.makeText(MainActivity.this, "The bot is unsure about his move ... but he choose PAPER", Toast.LENGTH_LONG).show();
             cpuChoice = "paper";
             iv_cpu.setImageResource(R.drawable.paper);
+            iv_cpu.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    iv_cpu.setVisibility(View.INVISIBLE);
+                }
+            },2000);
         } else if (cpu == 2) {
            // Toast.makeText(MainActivity.this, "The bot is unsure about his move ... but he choose SCISSORS", Toast.LENGTH_LONG).show();
             cpuChoice = "scissors";
             iv_cpu.setImageResource(R.drawable.scissors);
+            iv_cpu.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    iv_cpu.setVisibility(View.INVISIBLE);
+                }
+            },2000);
         }
         if(myChoice.equals("rock") && cpuChoice.equals("paper")){
           //  Thread.sleep(2000);
@@ -205,7 +244,7 @@ public class MainActivity extends AppCompatActivity {
             displayForCpu(scoreCpu);
         }
 
-        Toast.makeText(MainActivity.this, result, Toast.LENGTH_SHORT).show();
+        FancyToast.makeText(MainActivity.this, result, Toast.LENGTH_SHORT,FancyToast.SUCCESS, true).show();
     }
 
     private void configureBackButton(){

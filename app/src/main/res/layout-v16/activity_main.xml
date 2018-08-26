@@ -1,208 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:fontFamily="casual"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/small1">
-    <LinearLayout
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:fontFamily="casual"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-
+        android:layout_height="wrap_content"
+        android:background="#212121">
         <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context="com.bytao7mao.mariu.rps.MainActivity"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
 
-            <TextView
-                android:id="@+id/theUserName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:gravity="center_horizontal"
-                android:padding="16dp"
-                android:text="USER"
-                android:textColor="#616161"
-                android:textStyle="bold"
-                android:textSize="14sp" />
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                tools:context="com.bytao7mao.mariu.rps.MainActivity"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/theUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp"
+                    android:text="USER"
+                    android:textColor="#FFF"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
 
 
 
-<!--setting name for user-->
+                <!--setting name for user-->
 
 
 
 
-            <TextView
-                android:id="@+id/team_a_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center_horizontal"
-                android:padding="0dp"
-                android:text="@string/_0"
-                android:textColor="#000000"
-                android:textSize="56sp" />
-            <Button
-                android:id="@+id/rockBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/rock"
-                android:fontFamily="casual"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"/>
-            <Button
-                android:id="@+id/paperBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/paper"
-                android:fontFamily="casual"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"/>
-            <Button
-                android:id="@+id/scissorsBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/scissors"
-                android:fontFamily="casual"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp" />
+                <TextView
+                    android:id="@+id/team_a_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_horizontal"
+                    android:padding="0dp"
+                    android:text="0"
+                    android:textColor="#CDDC39"
+                    android:textSize="56sp" />
+                <Button
+                    android:id="@+id/rockBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ROCK"
+                    android:fontFamily="casual"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"/>
+                <Button
+                    android:id="@+id/paperBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PAPER"
+                    android:fontFamily="casual"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"/>
+                <Button
+                    android:id="@+id/scissorsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SCISSORS"
+                    android:fontFamily="casual"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="350dp"
+                android:background="@android:color/holo_green_light"/>
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                tools:context="com.bytao7mao.mariu.courtcounter.MainActivity"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp"
+                    android:text="BOT"
+                    android:textColor="#FFF"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/team_b_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textSize="56sp"
+                    android:textColor="#CDDC39"
+                    android:fontFamily="sans-serif-light"
+                    android:text="0"
+                    android:padding="0dp"/>
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ROCK"
+                    android:fontFamily="casual"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"/>
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PAPER"
+                    android:fontFamily="casual"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"/>
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SCISSORS"
+                    android:fontFamily="casual"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"/>
+            </LinearLayout>
+
         </LinearLayout>
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="350dp"
-            android:background="@android:color/darker_gray"/>
-
-
         <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
             tools:context="com.bytao7mao.mariu.courtcounter.MainActivity"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout2">
 
 
-            <TextView
-                android:layout_height="wrap_content"
+            <ImageView
+                android:id="@+id/userChoice"
                 android:layout_width="match_parent"
-                android:text="@string/bot"
-                android:fontFamily="casual"
-                android:gravity="center_horizontal"
-                android:textSize="14sp"
+                android:layout_height="100dp"
+                android:layout_marginTop="350dp"
+                android:layout_weight="1" />
 
-                android:textColor="#616161"
-                android:padding="16dp"/>
-            <TextView
-                android:id="@+id/team_b_score"
+            <ImageView
+                android:id="@+id/cpuChoice"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textSize="56sp"
-                android:textColor="#000000"
-                android:fontFamily="sans-serif-light"
-                android:text="@string/_0"
-                android:padding="0dp"/>
-            <Button
-                android:id="@+id/btn3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/rock"
-                android:fontFamily="casual"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"/>
-            <Button
-                android:id="@+id/btn2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/paper"
-                android:fontFamily="casual"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"/>
-            <Button
-                android:id="@+id/btn1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/scissors"
-                android:fontFamily="casual"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"/>
+                android:layout_height="100dp"
+                android:layout_marginTop="350dp"
+                android:layout_weight="1" />
+
+
         </LinearLayout>
-
-    </LinearLayout>
-    <LinearLayout
-        tools:context="com.bytao7mao.mariu.courtcounter.MainActivity"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="2"
-        android:orientation="horizontal"
-        android:id="@+id/linearLayout2">
-
-
-        <ImageView
-            android:id="@+id/userChoice"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="350dp"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/cpuChoice"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="350dp"
-            android:layout_weight="1" />
-
-
-    </LinearLayout>
 
     <Button
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
         android:onClick="reset"
-        android:text="@string/reset" />
+        android:text="reset" />
 
     <Button
         android:id="@+id/options"
         android:layout_width="60dp"
         android:layout_height="30dp"
-        android:layout_alignBaseline="@+id/reset"
-        android:layout_alignBottom="@+id/reset"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="@string/options"
+        android:text="Options"
         android:textSize="6sp"
-        android:textStyle="normal"
-        tools:ignore="SmallSp" />
+        android:textStyle="normal" />
 
-</RelativeLayout>
-
-</ScrollView>
+    </RelativeLayout>
